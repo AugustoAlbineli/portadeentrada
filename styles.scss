@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* BASE */
+.reveal {
+  font-family: 'Montserrat', sans-serif;
+  color: #2b2b2b;
+}
+
+/* SLIDES */
+.reveal section {
+  padding: clamp(30px, 5vw, 80px);
+}
+
+/* CAPA */
+.reveal .title-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding-left: clamp(60px, 8vw, 140px);
+  padding-bottom: 140px;
+
+  max-width: 900px;
+}
+
+/* TÍTULO */
+.reveal .title-slide h1 {
+  font-size: clamp(3rem, 4.5vw, 4rem);
+  line-height: 1.15;
+}
+
+/* SUBTÍTULO */
+.reveal .title-slide .subtitle {
+  font-size: 1.3rem;
+  margin-top: 15px;
+  max-width: 700px;
+}
+
+/* AUTORES */
+.reveal .title-slide .author {
+  font-size: 1.1rem;
+  margin-top: 20px;
+  max-width: 700px;
+}
+
+/* Títulos dos slides */
+
+.reveal h2 {
+  font-size: clamp(1.8rem, 2.5vw, 2.3rem);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  max-width: 900px;
+}
+
+
+/* LISTAS */
+.reveal ul {
+  font-size: 1.2em;
+  line-height: 1.4;
+}
+
+/* IMAGENS (GRÁFICOS) */
+.reveal img {
+  max-height: 75vh;
+  width: auto;
+  display: block;
+  margin: auto;
+}
+
+/* LOGO */
+.logo-spgg {
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  width: 200px;
+  z-index: 1000;
+}
+
+/* BARRA */
+.barra {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 8px;
+  width: 100%;
+  z-index: 999;
+  background: linear-gradient(to right,
+      #8FA12A 0%,
+      #8FA12A 33%,
+      #C1374B 33%,
+      #C1374B 66%,
+      #F2B94B 66%,
+      #F2B94B 100%);
+}
+
+/* Barra inferior (a partir do segundo slide) */
+.reveal .slides section:not(:first-child)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+
+  /* mesma paleta da barra superior */
+  background: linear-gradient(to right,
+      #7a9a01 0%,
+      #7a9a01 25%,
+      #b71c1c 25%,
+      #b71c1c 70%,
+      #e0a800 70%,
+      #e0a800 100%);
+}
